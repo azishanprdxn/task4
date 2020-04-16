@@ -9,8 +9,45 @@
 </head>
 
 <body>
-
-  <div id="data"></div>
+  <div class="wrapper">
+    <fieldset>
+      <div>
+        <h1>All Movies</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Release Date</th>
+              <th>Actors Name</th>
+              <th>Producers Name</th>
+            </tr>
+          </thead>
+          <tbody id="data"></tbody>
+        </table>
+      </div>
+      <div class="input-group">
+        <input type="text" id="search" placeholder="Enter Movies / Actors Name">
+        <span class="helper">Enter movies / actors name to search...</span>
+      </div>
+      <div class="input-control">
+        <button type="button" value="Search" onclick="onSearch()">Search</button>
+      </div>
+      <div class="result-area">
+        <h2>Search Result</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Release Date</th>
+              <th>Actors Name</th>
+              <th>Producers Name</th>
+            </tr>
+          </thead>
+          <tbody id="result"></tbody>
+        </table>
+      </div>
+    </fieldset>
+  </div>
   <script src="./assets/js/script.js"></script>
 </body>
 
