@@ -76,11 +76,12 @@ input[type="text"]::placeholder {
 }
 
 .helper {
-  display: none;
-  padding: 12px 0 0 0;
+  display: block;
+  opacity: 0;
   color: #f00;
   font-size: 14px;
   font-style: italic;
+  transform: translateY(-6px);
 }
 
 .input-group {

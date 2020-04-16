@@ -43,9 +43,12 @@ function onSearch() {
   searchText = searchText.toLowerCase();
   var isFound = false;
   if (!searchText) {
-    document.getElementsByClassName('helper')[0].style.display = "block";
+    document.getElementsByClassName('helper')[0].style.opacity = "1";
+    document.getElementsByClassName('helper')[0].style.transform = "translateY(6px)";
+    document.getElementsByClassName('helper')[0].style.transition = ".4s";
   } else {
-    document.getElementsByClassName('helper')[0].style.display = "none";
+    document.getElementsByClassName('helper')[0].style.opacity = "0";
+    document.getElementsByClassName('helper')[0].style.transform = "translateY(0)";
     for (var i = 0; i < length; i++) {
       if (searchText == movies[i].name.toLowerCase() || searchText == movies[i].actorsName.toLowerCase()) {
         // Display the Result
