@@ -20,7 +20,7 @@ movies.push(new movie("John Wick", 2014, "Keanu Reeves", "Basil Iwanyk"));
 movies.push(new movie("Man of Steel", 2013, "Henry Cavill", "Charles Roven"));
 movies.push(new movie("The Avengers", 2012, "Robert Downey Jr.", "Kevin Feige"));
 movies.push(new movie("The Martian", 2015, "Matt Damon", "Ridley Scott"));
-movies.push(new movie("The Matrix", 1999, "Keanu Reeves", "Joel Silver"));
+movies.push(new movie("The Matrix", 1999, "Hugo Weaving", "Joel Silver"));
 movies.push(new movie("Transformers", 2007, "Shia LaBeouf", "Ian Bryce"));
 
 // Getting length of the Array
@@ -48,10 +48,8 @@ function onSearch() {
     document.getElementsByClassName('helper')[0].style.display = "none";
     for (var i = 0; i < length; i++) {
       if (searchText == movies[i].name.toLowerCase() || searchText == movies[i].actorsName.toLowerCase()) {
-        // Displays the Result Area once an Entry is Found
-        document.getElementsByClassName('result-area')[0].style.display = "block";
         // Display the Result
-        document.getElementById("result").innerHTML +=
+        document.getElementById("data").innerHTML =
           "<tr>" +
           "<td>" + movies[i].name + "</td>" +
           "<td>" + movies[i].releaseDate + "</td>" +
@@ -62,7 +60,7 @@ function onSearch() {
       }
     }
     // Alert If Entry is Found/Not Found
-    if(!isFound) {
+    if (!isFound) {
       alert("Entry not found!");
     } else {
       alert("Entry Found");

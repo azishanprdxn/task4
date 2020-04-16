@@ -109,7 +109,3 @@ button:hover {
   color: #000;
   transition: .2s;
 }
-
-.result-area {
-  display: none;
-}
