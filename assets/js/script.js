@@ -40,13 +40,14 @@ for (var i = 0; i < length; i++) {
 // Search Function
 function onSearch() {
   var searchText = document.getElementById("search").value;
+  searchText = searchText.toLowerCase();
   var isFound = false;
   if (!searchText) {
     document.getElementsByClassName('helper')[0].style.display = "block";
   } else {
     document.getElementsByClassName('helper')[0].style.display = "none";
     for (var i = 0; i < length; i++) {
-      if (searchText == movies[i].name || searchText == movies[i].actorsName) {
+      if (searchText == movies[i].name.toLowerCase() || searchText == movies[i].actorsName.toLowerCase()) {
         // Displays the Result Area once an Entry is Found
         document.getElementsByClassName('result-area')[0].style.display = "block";
         // Display the Result
